@@ -198,3 +198,89 @@ p { margin-top: 0; }
   h1 { font-size: 40px; }
   h2 { font-size: 29px; }
 }
+body {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.025em;
+}
+
+/* 讓標題有清楚的層次 */
+h1,
+h2,
+h3 {
+  line-height: 1.45;
+  letter-spacing: 0.015em;
+  overflow-wrap: break-word;
+}
+
+/* 首頁主標題：保留原本的 HTML 結構 */
+.hero-copy h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.45;
+  max-width: 14em;
+  margin-bottom: 24px;
+}
+
+/* 內文控制寬度，避免一行太長 */
+.hero-text,
+.intro-section p,
+.article-content p {
+  max-width: 68ch;
+}
+
+/* 卡片閱讀空間 */
+.topic-card,
+.article-card,
+.service-card {
+  overflow-wrap: anywhere;
+}
+
+/* 圖片不超出卡片 */
+.article-image,
+.profile-placeholder {
+  overflow: hidden;
+}
+
+/* 鍵盤操作時，讓焦點更容易辨認 */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #718D9B;
+  outline-offset: 4px;
+}
+
+/* 手機版細節 */
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+    line-height: 1.5;
+  }
+
+  .hero-card-inner {
+    padding: 28px 22px;
+  }
+
+  .topic-grid,
+  .article-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px;
+  }
+
+  .contact-card {
+    padding: 28px 22px;
+  }
+
+  .site-nav a {
+    font-size: 16px;
+  }
+}
