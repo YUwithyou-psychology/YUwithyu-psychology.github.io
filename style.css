@@ -198,3 +198,118 @@ p { margin-top: 0; }
   h1 { font-size: 40px; }
   h2 { font-size: 29px; }
 }
+
+/* ========================================
+   YU 諮商心理師網站｜字體與閱讀體驗優化
+   標題：文青、細膩的宋體風格
+   內文：清楚、舒服的黑體
+   ======================================== */
+
+/* 全站內文 */
+body {
+  font-family:
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+/* 各層級標題：使用宋體增加細膩感 */
+h1,
+h2,
+h3,
+h4 {
+  font-family:
+    "Noto Serif TC",
+    "Songti TC",
+    "PMingLiU",
+    serif;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  overflow-wrap: break-word;
+}
+
+/* 頁面主標題 */
+h1 {
+  font-size: clamp(28px, 3.2vw, 36px);
+}
+
+/* 區塊標題 */
+h2 {
+  font-size: clamp(24px, 2.5vw, 29px);
+}
+
+/* 卡片與小標題 */
+h3 {
+  font-size: clamp(19px, 2vw, 22px);
+}
+
+h4 {
+  font-size: 18px;
+}
+
+/* 首頁主視覺標題 */
+.hero-copy h2 {
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* 文章與介紹文字 */
+p,
+li {
+  font-size: 1em;
+  line-height: 1.9;
+}
+
+/* 導覽列：保持簡潔、清楚 */
+.site-nav a {
+  font-family:
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 日期、分類等輔助資訊 */
+.article-meta,
+.article-date,
+.article-category {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 手機版：標題自然縮小，內文維持好閱讀 */
+@media (max-width: 700px) {
+  body {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .hero-copy h2 {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  .site-nav a {
+    font-size: 15px;
+  }
+}
